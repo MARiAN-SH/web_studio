@@ -1,0 +1,22 @@
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include desktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+.section-title {
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: 700;
+
+  line-height: 1.17;
+  text-align: center;
+
+  @include desktop {
+    margin-bottom: 50px;
+    font-size: 36px;
+  }
+}

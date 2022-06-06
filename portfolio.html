@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+
+  <body>
+    <!-- header -->
+    <header class="header">
+      <div class="container header__container">
+        <a class="logo header__logo" href="./index.html" lang="en"
+          >Web<span class="header__logo--black">Studio</span></a
+        >
+        <!-- nav -->
+        <nav class="navigation">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a class="navigation__link" href="./index.html">Studio</a>
+            </li>
+            <li class="navigation__item">
+              <a
+                class="navigation__link navigation__link--current"
+                href="./portfolio.html"
+                >Portfolio</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#footer" title="контакти"
+                >Contacts</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <ul class="contact-header">
+          <li class="contact-header__item">
+            <a class="contact-header__link" href="mailto:info@devstudio.com">
+              <svg class="contact-header__icon" width="16" height="12">
+                <use href="./images/icons.svg#icon-envelope"></use>
+              </svg>
+              info@devstudio.com
+            </a>
+          </li>
+          <li class="contact-header__item">
+            <a class="contact-header__link" href="tel:+380961111111">
+              <svg class="contact-header__icon" width="10" height="16">
+                <use href="./images/icons.svg#icon-smartphone"></use>
+              </svg>
+              +38 096 111 11 11
+            </a>
+          </li>
+        </ul>
+
+        <div class="menu-container" data-menu>
+          <!-- nav -->
+          <nav class="navigation menu-container__navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a class="navigation__link" href="./index.html">Studio</a>
+              </li>
+              <li class="navigation__item">
+                <a
+                  class="navigation__link navigation__link--current"
+                  href="./portfolio.html"
+                  >Portfolio</a
+                >
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#footer" title="contacts"
+                  >Contacts</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <ul class="contact-header menu-container__contact-header">
+            <li class="contact-header__item">
+              <a class="contact-header__link" href="mailto:info@devstudio.com">
+                <svg class="contact-header__icon" width="16" height="12">
+                  <use href="./images/icons.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com
+              </a>
+            </li>
+            <li class="contact-header__item">
+              <a class="contact-header__link" href="tel:+380961111111">
+                <svg class="contact-header__icon" width="10" height="16">
+                  <use href="./images/icons.svg#icon-smartphone"></use>
+                </svg>
+                +38 096 111 11 11
+              </a>
+            </li>
+            <ul class="contact-header__soc">
+              <li><a href="">Instagram</a></li>
+              <li><a href="">Twitter</a></li>
+              <li><a href="">Facebook</a></li>
+              <li><a href="">LinkedIn</a></li>
+            </ul>
+          </ul>
+        </div>
+
+        <button class="menu" data-menu-button aria-label="Main Menu">
+          <svg width="40" height="40" viewBox="0 0 100 100">
+            <path
+              class="line line1"
+              d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
+            />
+            <path class="line line2" d="M 20,50 H 80" />
+            <path
+              class="line line3"
+              d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
+            />
+          </svg>
+        </button>
+      </div>
+    </header>
+    <!-- main -->
+    <main>
+      <!-- section portfolio -->
+      <section class="portfolio section">
+        <div class="container">
+          <!-- menu button -->
+          <h2 hidden>Portfolio</h2>
+          <menu class="portfolio-menu">
+            <li class="portfolio-menu__item">
+              <button
+                class="btn portfolio-btn portfolio-btn--active"
+                type="button"
+                data-filter="all"
+              >
+                All
+              </button>
+            </li>
+            <li class="portfolio-menu__item">
+              <button
+                class="btn portfolio-btn"
+                type="button"
+                data-filter=".web-sites"
+              >
+                Web sites
+              </button>
+            </li>
+            <li class="portfolio-menu__item">
+              <button
+                class="btn portfolio-btn"
+                type="button"
+                data-filter=".applications"
+              >
+                Applications
+              </button>
+            </li>
+            <li class="portfolio-menu__item">
+              <button
+                class="btn portfolio-btn"
+                type="button"
+                data-filter=".design"
+              >
+                Design
+              </button>
+            </li>
+            <li class="portfolio-menu__item">
+              <button
+                class="btn portfolio-btn"
+                type="button"
+                data-filter=".marketing"
+              >
+                Marketing
+              </button>
+            </li>
+          </menu>
+
+          <!-- list portfolio -->
+          <ul class="portfolio__list">
+            <li class="portfolio__item mix web-sites">
+              <a href="" class="portfolio__link">
+                <div class="img-wrapper">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/porfolio/img.jpg    1x,
+                        ./images/porfolio/img-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/porfolio/img-tablet.jpg    1x,
+                        ./images/porfolio/img-tablet-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/porfolio/img-mob.jpg    1x,
+                        ./images/porfolio/img-mob-2x.jpg 2x
+                      "
+                      media="(max-width: 768px)"
+                    />
+                    <img src="./images/porfolio/img-mob.jpg" alt="Techkryk" />
+                  </picture>
+
+                  <p class="portfolio-overlay">
+                    The resource offers complex offers with different levels
+                    functionality and services. All this will allow the visitor
+                    to get exhaustive information about the company or private
+                    person.
+                  </p>
+                </div>
+                <div class="portfolio-content">
+                  <h3 class="portfolio-content__name">Techkryk</h3>
+                  <p class="portfolio-content__description">Website</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="portfolio__item mix applications">
+              <a href="" class="portfolio__link">
+                <div class="img-wrapper">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/porfolio/img-1.jpg    1x,
+                        ./images/porfolio/img-1-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/porfolio/img-1-tablet.jpg    1x,
+                        ./images/porfolio/img-1-tablet-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/porfolio/img-1-mob.jpg    1x,
+                        ./images/porfolio/img-1-mob-2x.jpg 2x
+                      "
+                      media="(max-width: 768px)"
+                    />
+                    <img
+                      src="./images/porfolio/img-1-mob.jpg"
+                      alt="Poster New Orleans against the Golden Star"
+                    />
+                  </picture>
+
+                  <p class="portfolio-overlay">
+                    The resource offers complex offers with different levels
+                    functionality and services. All this will allow the visitor
+                    to get exhaustive information about the company or private
+                    person.
+                  </p>
+                </div>
+                <div class="portfolio-content">
+                  <h3 class="portfolio-content__name" lang="ru en">
+                    Poster New Orlean vs Golden Star
+                  </h3>
+                  <p class="portfolio-content__description">Application</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="portfolio__item mix marketing">
+              <a href="" class="portfolio__link">
+                <div class="img-wrapper">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/porfolio/img-2.jpg    1x,
+                        ./images/porfolio/img-2-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/porfolio/img-2-tablet.jpg    1x,
+                        ./images/porfolio/img-2-tablet-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/porfolio/img-2-mob.jpg    1x,
+                        ./images/porfolio/img-2-mob-2x.jpg 2x
+                      "
+                      media="(max-width: 768px)"
+                    />
+                    <img
+                      src="./images/porfolio/img-2-mob.jpg"
+                      alt="Restaurant seafood"
+                    />
+                  </picture>
+
+                  <p class="portfolio-overlay">
+                    The resource offers complex offers with different levels 
+                     functionality and services. All this will allow the visitor to get 
+                     exhaustive information about the company or private person.
+                  </p>
+                </div>
+                <div class="portfolio-content">
+                  <h3 class="portfolio-content__name" lang="ru en">
+                    Restaurant Seafood
+                  </h3>
+                  <p class="portfolio-content__description">Marketing</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="portfolio__item mix marketing">
+              <a href="" class="portfolio__link">
+                <div class="img-wrapper">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/porfolio/img-3.jpg    1x,
+                        ./images/porfolio/img-3-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/porfolio/img-3-tablet.jpg    1x,
+                        ./images/porfolio/img-3-tablet-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/porfolio/img-3-mob.jpg    1x,
+                        ./images/porfolio/img-3-mob-2x.jpg 2x
+                      "
+                      media="(max-width: 768px)"
+                    />
+                    <img
+                      src="./images/porfolio/img-3-mob.jpg"
+                      alt="The project is the main"
+                    />
+                  </picture>
+
+                  <p class="portfolio-overlay">
+                    The resource offers complex offers with different levels 
+                     functionality and services. All this will allow the visitor to get 
+                     exhaustive information about the company or private person.
+                  </p>
+                </div>
+                <div class="portfolio-content">
+                  <h3 class="portfolio-content__name" lang="ru en">
+                    Project Prime
+                  </h3>
+                  <p class="portfolio-content__description">Marketing</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="portfolio__item mix applications">
+              <a href="" class="portfolio__link">
+                <div class="img-wrapper">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/porfolio/img-4.jpg    1x,
+                        ./images/porfolio/img-4-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/porfolio/img-4-tablet.jpg    1x,
+                        ./images/porfolio/img-4-tablet-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/porfolio/img-4-mob.jpg    1x,
+                        ./images/porfolio/img-4-mob-2x.jpg 2x
+                      "
+                      media="(max-width: 768px)"
+                    />
+                    <img
+                      src="./images/porfolio/img-4-mob.jpg"
+                      alt="The box of the box"
+                    />
+                  </picture>
+
+                  <p class="portfolio-overlay">
+                    The resource offers complex offers with different levels 
+                     functionality and services. All this will allow the visitor to get 
+                     exhaustive information about the company or private person.
+                  </p>
+                </div>
+                <div class="portfolio-content">
+                  <h3 class="portfolio-content__name" lang="ru en">
+                    Project Boxes
+                  </h3>
+                  <p class="portfolio-content__description">Application</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="portfolio__item mix web-sites">
+              <a href="" class="portfolio__link">
+                <div class="img-wrapper">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/porfolio/img-5.jpg    1x,
+                        ./images/porfolio/img-5-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/porfolio/img-5-tablet.jpg    1x,
+                        ./images/porfolio/img-5-tablet-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/porfolio/img-5-mob.jpg    1x,
+                        ./images/porfolio/img-5-mob-2x.jpg 2x
+                      "
+                      media="(max-width: 768px)"
+                    />
+                    <img
+                      src="./images/porfolio/img-5-mob.jpg"
+                      alt="Inspiration has no boundaries"
+                    />
+                  </picture>
+
+                  <p class="portfolio-overlay">
+                    The resource offers complex offers with different levels 
+                     functionality and services. All this will allow the visitor to get 
+                     exhaustive information about the company or private person.
+                  </p>
+                </div>
+                <div class="portfolio-content">
+                  <h3 class="portfolio-content__name" lang="en">
+                    Inspiration has no Borders
+                  </h3>
+                  <p class="portfolio-content__description">Website</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="portfolio__item mix design">
+              <a href="" class="portfolio__link">
+                <div class="img-wrapper">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/porfolio/img-6.jpg    1x,
+                        ./images/porfolio/img-6-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/porfolio/img-6-tablet.jpg    1x,
+                        ./images/porfolio/img-6-tablet-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/porfolio/img-6-mob.jpg    1x,
+                        ./images/porfolio/img-6-mob-2x.jpg 2x
+                      "
+                      media="(max-width: 768px)"
+                    />
+                    <img
+                      src="./images/porfolio/img-6-mob.jpg"
+                      alt="The publication is a limited issue"
+                    />
+                  </picture>
+
+                  <p class="portfolio-overlay">
+                    The resource offers complex offers with different levels 
+                     functionality and services. All this will allow the visitor to get 
+                     exhaustive information about the company or private person.
+                  </p>
+                </div>
+                <div class="portfolio-content">
+                  <h3 class="portfolio-content__name" lang="ru en">
+                    Edition Limited Edition
+                  </h3>
+                  <p class="portfolio-content__description">Design</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="portfolio__item mix marketing">
+              <a href="" class="portfolio__link">
+                <div class="img-wrapper">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/porfolio/img-7.jpg    1x,
+                        ./images/porfolio/img-7-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/porfolio/img-7-tablet.jpg    1x,
+                        ./images/porfolio/img-7-tablet-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/porfolio/img-7-mob.jpg    1x,
+                        ./images/porfolio/img-7-mob-2x.jpg 2x
+                      "
+                      media="(max-width: 768px)"
+                    />
+                    <img
+                      src="./images/porfolio/img-7-mob.jpg"
+                      alt="Project LAB"
+                    />
+                  </picture>
+
+                  <p class="portfolio-overlay">
+                    The resource offers complex offers with different levels 
+                     functionality and services. All this will allow the visitor to get 
+                     exhaustive information about the company or private person.
+                  </p>
+                </div>
+                <div class="portfolio-content">
+                  <h3 class="portfolio-content__name">Project LAB</h3>
+                  <p class="portfolio-content__description">Marketing</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="portfolio__item mix applications">
+              <a href="" class="portfolio__link">
+                <div class="img-wrapper">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/porfolio/img-8.jpg    1x,
+                        ./images/porfolio/img-8-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/porfolio/img-8-tablet.jpg    1x,
+                        ./images/porfolio/img-8-tablet-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/porfolio/img-8-mob.jpg    1x,
+                        ./images/porfolio/img-8-mob-2x.jpg 2x
+                      "
+                      media="(max-width: 768px)"
+                    />
+                    <img
+                      src="./images/porfolio/img-8-mob.jpg"
+                      alt="Растущий бизнес"
+                    />
+                  </picture>
+
+                  <p class="portfolio-overlay">
+                    The resource offers complex offers with different levels 
+                     functionality and services. All this will allow the visitor to get 
+                     exhaustive information about the company or private person.
+                  </p>
+                </div>
+                <div class="portfolio-content">
+                  <h3 class="portfolio-content__name" lang="en">
+                    Growing Business
+                  </h3>
+                  <p class="portfolio-content__description">Application</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer" id="footer">
+      <div class="container footer__container">
+        <div class="footer-address">
+          <a class="logo" href="./index.html"
+            >Web<span class="footer__logo--white">Studio</span></a
+          >
+          <address class="address">
+            <a
+              class="address__link"
+              href="https://goo.gl/maps/6HANdDSxnNxps1i66"
+              target="_blank"
+              >Kyiv, Ave. Lesya Ukrainka, 26</a
+            >
+            <ul class="footer-contact">
+              <li class="footer-contact__item">
+                <a class="footer-contact__link" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li class="footer-contact__item">
+                <a class="footer-contact__link" href="tel:+380961111111"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+          </address>
+        </div>
+
+        <div class="footer-soc">
+          <b class="footer-text">Join</b>
+          <ul class="social-links footer__social-links">
+            <li class="social-links__item">
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                class="social-links__link social-links__link--bgc"
+              >
+                <svg class="icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-links__item">
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                class="social-links__link social-links__link--bgc"
+              >
+                <svg class="icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-links__item">
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                class="social-links__link social-links__link--bgc"
+              >
+                <svg class="icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-links__item">
+              <a
+                href="https://www.linkedin.com"
+                target="_blank"
+                class="social-links__link social-links__link--bgc"
+              >
+                <svg class="icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-form">
+          <b class="footer-text">Subscribe to the newsletter</b>
+          <form action="#" class="form js-speaker-form">
+            <div class="footer-from__field">
+              <input
+                class="form__input"
+                id="form-footer"
+                type="email"
+                name="mail"
+                placeholder="  "
+                data-placeholder="Enter your own email"
+                autocomplete="on"
+              />
+              <label class="form__label">E-mail</label>
+            </div>
+            <button class="btn btn--accent footer-form__btn" type="submit">
+              Subscribe
+              <svg class="form__icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="./js/form.js"></script>
+    <script src="./js/burgr-menu.js"></script>
+    <script src="./js/mixitub/mixitup.min.js"></script>
+    <script src="./js/mixitub/mixitub.js"></script>
+  </body>
+</html>
